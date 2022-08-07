@@ -1,5 +1,8 @@
 package org.example;
 
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class CalculaterTest {
@@ -23,6 +26,24 @@ class CalculaterTest {
     }
 
     @org.junit.jupiter.api.Test
+    @DisplayName("multiply 2 numbers")
     void multiply() {
+        assertAll(()->assertEquals(4, Calculater.sum(2,2)),
+                ()->   assertEquals(-3, Calculater.sum(3,-1)),
+                ()-> assertEquals(6, Calculater.sum(-2,-3)),
+                ()->  assertEquals(0, Calculater.sum(-2,0)));
+        //test
+
+
+
+
+    }
+
+    @Test
+    void testSum() {
+    }
+
+    @Test
+    void testMultiply() {
     }
 }
